@@ -3,7 +3,7 @@ import _debounce from "lodash/debounce";
 import { withTheme, withStyles } from "@material-ui/core/styles";
 import { injectIntl } from "react-intl";
 import { Grid } from "@material-ui/core";
-import { withModulesManager, ControlledField, TextInput } from "@openimis/fe-core";
+import { withModulesManager, ControlledField, TextInput, PublishedComponent } from "@openimis/fe-core";
 
 const styles = (theme) => ({
   dialogTitle: theme.dialog.title,
@@ -72,7 +72,7 @@ class ProgramFilter extends Component {
               </Grid>
             }
           />
-           <ControlledField
+          <ControlledField
             module="program"
             id="programFilter.code"
             field={
@@ -89,6 +89,30 @@ class ProgramFilter extends Component {
                         id: "code",
                         value: v,
                         filter: `code_Icontains: "${v}"`,
+                      },
+                    ])
+                  }
+                />
+              </Grid>
+            }
+          />
+          <ControlledField
+            module="program"
+            id="programFilter.validityDateFrom"
+            field={
+              <Grid item xs={3} className={classes.item}>
+                <PublishedComponent
+                  pubRef="core.DatePicker"
+                  module="program"
+                  label="program.validityDateFrom"
+                  name="validityDateFrom"
+                  value={this.filterValue("validityDateFrom")}
+                  onChange={(v) =>
+                    this.debouncedOnChangeFilter([
+                      {
+                        id: "validityDateFrom",
+                        value: v,
+                        filter: v ? `validityDateFrom: "${v}"` : null,
                       },
                     ])
                   }

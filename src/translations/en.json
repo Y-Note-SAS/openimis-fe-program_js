@@ -6,6 +6,7 @@
     "program.program.code": "Program code",
     "program.program.validity": "Validity",
     "program.validityDateFrom": "Validity date From",
+    "program.validityDate": "Validity Date",
     "program.deleteDialog.title": "Delete program",
     "program.openNewTab": "Open in new tab",
     "program.deleteDialog.message": "Are you sure you want to delete this program?",
