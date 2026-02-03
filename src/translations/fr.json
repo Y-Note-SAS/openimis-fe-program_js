@@ -6,6 +6,7 @@
     "program.program.code": "Code du programme",
     "program.program.validity": "Validité",
     "program.validityDateFrom": "Valide du",
+    "program.validityDate": "Date de validité",
     "program.deleteDialog.title": "Supprimer un programme",
     "program.openNewTab": "Ouvrir dans un nouvel onglet",
     "program.deleteDialog.message": "êtes sûre de vouloir supprimer ce programme?",
